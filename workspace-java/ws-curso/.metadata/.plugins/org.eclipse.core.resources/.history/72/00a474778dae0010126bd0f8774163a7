@@ -1,0 +1,50 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Funcionario;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Quantos funcionários serão registrados? ");
+		int n = sc.nextInt();
+		
+		List <Funcionario> lista = new ArrayList<>();
+		
+		for(int i = 1; i < n; i ++) {
+			
+			System.out.println();
+			System.out.println("Funcionário #" + i);;
+			System.out.print("Id: ");
+			Integer id = sc.nextInt();
+			
+			sc.nextLine();
+			System.out.print("Nome: ");
+			String name = sc.next();
+			
+			System.out.print("Salário: ");
+			Double salario = sc.nextDouble();
+			
+			Funcionario funcionario = new Funcionario(id, name, salario);
+			
+			lista.add(funcionario);
+			
+		}
+		
+		System.out.println("Informe o id do funcionário que terá o salário incrementado: ");
+		int id = sc.nextInt();
+		
+		
+		
+		sc.close();
+	}
+
+}

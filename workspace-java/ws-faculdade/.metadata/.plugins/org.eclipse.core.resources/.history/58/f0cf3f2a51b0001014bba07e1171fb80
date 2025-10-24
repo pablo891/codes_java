@@ -1,0 +1,87 @@
+package atividade01;
+
+import atividade02.Cartao;
+
+public class Conta {
+
+	private int numero;
+	private Cartao cartao;
+	private int senha;
+	private double saldo;
+	
+	public Conta(int numConta, int numCartao, Cliente titular, int senha, double saldo) {
+			this.numero = numConta;
+			this.cartao = new Cartao(numCartao, titular);
+			this.senha = senha;
+			this.saldo = saldo;
+		}
+	
+	public  int getNumero() {
+		return this.numero;
+	}
+	
+	
+
+	public Cliente getTitular() {
+		return cartao.getTitular();
+	}
+	
+	public void setTitular(Cliente titular) {
+		 cartao.setTitular(titular);
+	}
+
+	public double verificaSaldo(int senha) {
+		if(senhaEhCorreta(senha)) {
+			return this.saldo;
+		}
+		return -1;
+	}
+	
+	public boolean creditaValor(double valor) {
+		if(valor >= 0) {
+			this.saldo += valor;
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean debitaValor(double valor, int senha) {
+		if(valor > 0 && this.senhaEhCorreta(senha) && this.saldo >= valor) {
+			this.saldo -= valor;
+			return true;
+		}
+		return false;
+	}
+	
+	public void alteraCartao(int numeroDoCartao, Cliente titular) {
+		this.cartao = new Cartao(numeroDoCartao, titular);
+		}
+	
+	private boolean senhaEhCorreta(int senha) {
+		return this.senha == senha;
+	}
+	
+	public String toString() {
+		return "Conta número: " + this.numero +
+				"\nNúmero do Cartão: " this.cartao +
+				"\nTitular: " + cartao.getTitular() +
+				"\nSaldo: " + this.saldo;
+	}
+	
+	public boolean equals(Object o) {
+		if(!(o instanceof Conta)) {
+			return false;
+		}
+		
+		Conta outra = (Conta) o;
+		
+		if(this.numero == outra.getNumero() &&
+			cartao.getTitular().equals(outra.getTitular())){
+			return true;
+		}
+		
+		return false;
+		
+	}
+	
+}

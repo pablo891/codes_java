@@ -1,0 +1,27 @@
+package application;
+
+import java.text.ParseException;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class Date {
+
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		
+		Date x1 = new Date();
+		Date x2 = new Date();
+		
+		java.util.Date y1 = sdf1.parse("25/06/2025");
+		java.util.Date y2 = sdf2.parse("25/06/2025 15:39:08");
+		
+		System.out.println("x1: " + x1);
+		System.out.println("x2: " + sdf2.format(x2));
+		System.out.println("y1: " + sdf1.format(y1));
+		System.out.println("y2: " + sdf2.format(y2));
+
+	}
+
+}

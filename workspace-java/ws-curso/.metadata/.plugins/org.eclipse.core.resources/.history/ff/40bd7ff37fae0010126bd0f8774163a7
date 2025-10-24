@@ -1,0 +1,46 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		List <String> list = new ArrayList <>();
+		
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Anna");
+		list.add(2, "Pablo"); //Adionando elementos à lista e indicando a posição
+		
+		
+		System.out.println(list.size()); // Verificando tamanho da lista
+		
+		
+		for(String x : list) {
+			System.out.println(x);
+		}
+		
+		System.out.println("-----------------");
+		
+		/*list.remove("Anna"); // removendo pelo conteúdo
+		list.remove(1); // removendo pela posição na lista */
+		list.removeIf(x -> x.charAt(0) == 'M'); // remoção usando predicado
+		
+		for(String x : list) {
+			System.out.println(x);
+		}
+		
+		System.out.println("-----------------");
+		System.out.println("Index of Bob: " + list.indexOf("Bob")); // Procurando elementos na lista
+		
+		
+		System.out.println("-----------------");
+		
+		List <String> result = list.stream()
+		
+	}
+
+}

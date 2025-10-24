@@ -1,0 +1,15 @@
+package atividade01;
+
+public class Cliente {
+	
+	private String titular;
+	private String cpf;
+	
+	
+	public Cliente(String titular, String cpf) {
+		this.titular = titular;
+		this.cpf = cpf;
+	}
+	
+	
+}

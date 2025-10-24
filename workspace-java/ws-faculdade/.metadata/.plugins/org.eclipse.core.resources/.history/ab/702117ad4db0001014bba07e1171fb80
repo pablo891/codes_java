@@ -1,0 +1,19 @@
+package atividade01;
+
+public class Cliente {
+	
+	private String titular;
+
+	public Cliente(String nome) {
+		this.titular = nome;
+	}
+
+	public String getNome() {
+		return titular;
+	}
+
+	public void setNome(String nome) {
+		this.titula = nome;
+	}
+	
+}

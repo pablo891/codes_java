@@ -1,0 +1,20 @@
+package atividade03;
+
+public class TestePopulacao {
+
+	public static void main(String[] args) {
+		
+		PopulacaoDeBaratas p1 = new PopulacaoDeBaratas();
+		
+		System.out.println(p1);
+		
+		p1.esperaUmTempo();
+		System.out.println(p1);
+		p1.pulveriza();
+		p1.pulveriza();
+		p1.pulveriza();
+		System.out.println(p1);
+
+	}
+
+}

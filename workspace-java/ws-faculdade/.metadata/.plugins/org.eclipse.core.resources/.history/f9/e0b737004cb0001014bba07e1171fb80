@@ -1,0 +1,18 @@
+package atividade01;
+
+public class Conta {
+	
+	private int numero;
+	private Cliente titular;
+	private int senha;
+	private double saldo;
+	
+	public Conta(int numero, Cliente titular, int senha, double saldo) {
+		this.numero = numero;
+		this.titular = titular;
+		this.senha = senha;
+		this.saldo = saldo;
+	}
+	
+	
+}

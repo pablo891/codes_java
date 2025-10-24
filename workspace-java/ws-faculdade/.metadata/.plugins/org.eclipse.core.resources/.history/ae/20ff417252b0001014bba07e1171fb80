@@ -1,0 +1,32 @@
+package atividade01;
+
+import atividade02.Cartao;
+
+public class TesteConta {
+
+	public static void main(String[] args) {
+		
+		
+		package atividade01;
+
+		import atividade02.Cartao;
+
+		public class TesteConta {
+
+		    public static void main(String[] args) {
+		        
+		        Cliente cliente1 = new Cliente("Pablo");
+		        Cartao cartao1 = new Cartao(831024, cliente1);
+		        Conta conta1 = new Conta(301042, cartao1, 410, 700.0);
+		        
+		        Cliente cliente2 = new Cliente("João");
+		        Cartao cartao2 = new Cartao(999888, cliente2);
+		        Conta conta2 = new Conta(301043, cartao2, 123, 500.0);
+		    }
+		}
+
+		
+		
+	}
+
+}

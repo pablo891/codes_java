@@ -1,0 +1,16 @@
+package atividade01;
+
+public class TesteConta {
+
+	public static void main(String[] args) {
+		
+		Cliente cl1 = new Cliente("Pablo");
+		
+		Conta c1 = new Conta(318320, cl1, 3152, 500.0);
+		
+		System.out.println(c1.toString());
+		
+		
+	}
+
+}

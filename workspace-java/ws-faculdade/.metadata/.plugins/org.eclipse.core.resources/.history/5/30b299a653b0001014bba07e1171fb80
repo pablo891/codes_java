@@ -1,0 +1,28 @@
+package atividade02;
+
+import atividade01.Cliente;
+
+public class Cartao {
+
+	private int numero;
+	
+	private Cliente nome;
+	
+	public Cartao(int numero, Cliente nome) {
+		this.numero = numero;
+		this.titular = nome;
+	}
+	
+	public int getNumero() {
+		return this.numero;
+	}
+	
+	public Cliente getTitular() {
+		return this.titular;
+	}
+	
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package atividade01;
+
+public class Conta {
+	
+	private int numero;
+	private Cliente titular;
+	private int senha;
+	private double saldo;
+	
+}
